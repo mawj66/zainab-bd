@@ -1,0 +1,94 @@
+body {
+    background-color: #ffebcd;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff69b4;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#yesButton {
+    background-color: #32cd32;
+}
+
+#noButton {
+    background-color: #ff4500;
+    position: absolute;
+    transition: top 0.3s ease, left 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.fireworks, .hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.gif {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.firework, .heart {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 1;
+    }
+}
